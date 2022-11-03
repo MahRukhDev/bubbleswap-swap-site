@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="38px" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 19</title>
+    <defs>
+        <linearGradient x1="32.3850089%" y1="100%" x2="68.9349644%" y2="6.88529462%" id="linearGradient-1">
+            <stop stop-color="#ECE6FF" offset="0%"></stop>
+            <stop stop-color="#C0AFF4" offset="5.80243612%"></stop>
+            <stop stop-color="#9E84EB" offset="35.1723462%"></stop>
+            <stop stop-color="#653DDC" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-24.0%" y="-21.6%" width="148.0%" height="143.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="1.31755786" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="39.0965983%" y1="100%" x2="61.7204443%" y2="6.88529462%" id="linearGradient-3">
+            <stop stop-color="#ECE6FF" offset="0%"></stop>
+            <stop stop-color="#C0AFF4" offset="5.80243612%"></stop>
+            <stop stop-color="#9E84EB" offset="35.1723462%"></stop>
+            <stop stop-color="#653DDC" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="10.7556883%" y1="56.8444544%" x2="76.7925468%" y2="24.2689415%" id="linearGradient-4">
+            <stop stop-color="#EBE4FF" offset="0%"></stop>
+            <stop stop-color="#E8E0FF" offset="41.0486882%"></stop>
+            <stop stop-color="#C7B4FF" offset="76.8821023%"></stop>
+            <stop stop-color="#A387F9" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#6D3DFA" offset="0%"></stop>
+            <stop stop-color="#CFC1FB" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板" transform="translate(-42.000000, -919.000000)">
+            <g id="编组-19" transform="translate(42.000000, 919.000000)">
+                <path d="M15.6215767,10.9190742 L11.4447535,13.777572 C10.7835394,14.2300879 10.3947054,14.9383977 10.3947054,15.690366 L10.3947054,26.0915245 C10.3947054,27.4142398 11.5752514,28.4865124 13.0315287,28.4865124 L26.8484644,28.4865124 C26.5294837,21.1858292 26.3699933,17.4380771 26.3699933,17.2432562 C26.3699933,16.9510248 17.2787531,10.1841869 16.7421178,10.1841869" id="路径" fill="url(#linearGradient-1)" filter="url(#filter-2)"></path>
+                <path d="M26.7921156,28.4865124 L28.3631768,28.4865124 C29.819454,28.4865124 31,27.3067309 31,25.8513966 L31,14.4073905 C31,13.5800278 30.611166,12.800701 29.9499519,12.3028146 L22.2841278,6.53053987 C21.3446887,5.82315338 20.0500167,5.82315338 19.1105776,6.53053987 L15.0954732,9.55386595 C15.7633325,9.24688199 16.2824128,9.17013601 16.652714,9.32362798 C17.0230153,9.47711996 20.1608174,11.7165306 26.0661206,16.0418598 C26.5501173,16.6015581 26.7921156,17.3516382 26.7921156,18.2921003" id="路径" fill="url(#linearGradient-3)"></path>
+                <path d="M14.2280193,10.2099224 L7.0177077,15.8157369 C6.37559454,16.3149619 6,17.0827318 6,17.8960797 L6,29.3648843 C6,30.8202185 7.1797815,32 8.63511573,32 L23.9701789,32 C25.4255131,32 26.6052946,30.8202185 26.6052946,29.3648843 L26.6052946,17.9787969 C26.6052946,17.119015 26.1858452,16.3132992 25.4815335,15.8201765 L17.356782,10.1316448 C16.409631,9.46849855 15.1408239,9.50024247 14.2280193,10.2099224 Z" id="直线-2" stroke="#E4DBFF" stroke-width="0.527023146" fill="url(#linearGradient-4)" opacity="0.475744913" stroke-linecap="square"></path>
+                <rect id="矩形" fill="#FFFFFF" x="7.31841162" y="17.9245339" width="1.75788216" height="4.39185955" rx="0.878371909"></rect>
+                <path d="M16.2054826,24.0731373 C18.0932494,24.0731373 19.6235868,25.6034747 19.6235868,27.4912415 L19.6235868,31.9784845 L19.6235868,31.9784845 L12.7873784,31.9784845 L12.7873784,27.4912415 C12.7873784,25.6034747 14.3177157,24.0731373 16.2054826,24.0731373 Z" id="矩形" fill="url(#linearGradient-5)" opacity="0.859624818"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="534px" height="198px" viewBox="0 0 534 198" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>bg-liudong</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#EFF7FF" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="534" height="198" rx="20"></rect>
+        <linearGradient x1="50%" y1="25.961511%" x2="39.6114083%" y2="36.4694483%" id="linearGradient-4">
+            <stop stop-color="#EBF4FB" offset="0%"></stop>
+            <stop stop-color="#EDF6FD" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="31.0612841%" y1="48.0242946%" x2="11.1771162%" y2="51.3269352%" id="linearGradient-5">
+            <stop stop-color="#ECF4FC" offset="0%"></stop>
+            <stop stop-color="#DCECF9" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="47.1181597%" y1="34.2673274%" x2="33.9101169%" y2="40.536081%" id="linearGradient-6">
+            <stop stop-color="#EDF0FF" offset="0%"></stop>
+            <stop stop-color="#BDE1FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页" transform="translate(-1096.000000, -319.000000)">
+            <g id="bg-liudong" transform="translate(1096.000000, 319.000000)">
+                <g id="编组-7">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="矩形" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <ellipse id="椭圆形" fill="url(#linearGradient-4)" opacity="0.300000012" mask="url(#mask-3)" cx="341" cy="268.5" rx="354" ry="242.5"></ellipse>
+                    <ellipse id="椭圆形" fill="url(#linearGradient-4)" opacity="0.400000006" mask="url(#mask-3)" cx="430" cy="285.5" rx="354" ry="242.5"></ellipse>
+                    <path d="M-23.860747,130.063976 C13.58228,112.53318 76.8652985,102.11594 111.667843,105.505987 C146.470387,108.896033 177.409957,107.344119 532.825944,210.088149 C550.485889,218.204841 368.917551,224.13171 -11.8790709,227.868756 C-44.828873,174.352767 -48.822765,141.751174 -23.860747,130.063976 Z" id="路径-9" fill="url(#linearGradient-5)" opacity="0.800000012" mask="url(#mask-3)"></path>
+                    <ellipse id="椭圆形" fill="url(#linearGradient-6)" opacity="0.200000003" mask="url(#mask-3)" cx="517.5" cy="320" rx="340.5" ry="191"></ellipse>
+                </g>
+                <g id="编组-11" transform="translate(44.000000, 19.000000)">
+                    <g id="编组-8" transform="translate(37.386996, 0.000000)" stroke="#FF9B39" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.87617306">
+                        <path d="M3.02744139,8.32797657 C6.0056569,75.0472254 61.0394428,128.224523 128.493452,128.224523 C136.204237,128.224523 143.586224,127.529646 150.91321,126.199097" id="路径" transform="translate(76.970326, 68.276250) rotate(2.000000) translate(-76.970326, -68.276250) "></path>
+                        <line x1="144.339575" y1="122.8141" x2="151.046769" y2="129.121827" id="路径-2" transform="translate(147.693172, 125.967963) rotate(-5.000000) translate(-147.693172, -125.967963) "></line>
+                        <line x1="144.906906" y1="129.097057" x2="151.614101" y2="135.808127" id="路径-2" transform="translate(148.260503, 132.452592) scale(1, -1) rotate(5.000000) translate(-148.260503, -132.452592) "></line>
+                    </g>
+                    <path d="M56.9553685,65.0265266 C60.9909418,62.4921271 66.3169571,63.709069 68.8513566,67.7446424 C78.7495524,83.5057312 92.298207,96.7324112 108.294557,106.243733 C112.390592,108.679208 113.736741,113.974042 111.301267,118.070076 C108.865792,122.16611 103.570958,123.51226 99.4749241,121.076786 C81.1252233,110.166177 65.5906882,95.00081 54.2372527,76.9225147 C51.7028532,72.8869414 52.9197951,67.5609261 56.9553685,65.0265266 Z" id="路径" stroke="#5AD6AD" stroke-width="1.91744871" fill-opacity="0.4" fill="#5AD6AD" fill-rule="nonzero"></path>
+                    <g id="编组-10" transform="translate(83.163584, 66.590008)" stroke="#5AD6AD" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.91744871">
+                        <path d="M2.29878448,1.47440806 C5.14101525,8.18439345 13.2937181,17.5205723 21.1750449,19.832638" id="路径"></path>
+                        <line x1="1.83473386" y1="0.466235404" x2="1.30589703" y2="4.59556992" id="路径-3" transform="translate(1.570315, 2.530903) rotate(14.000000) translate(-1.570315, -2.530903) "></line>
+                        <line x1="2.16663571" y1="1.09343817" x2="6.41405365" y2="1.89244628" id="路径-3" transform="translate(4.290345, 1.492942) rotate(14.000000) translate(-4.290345, -1.492942) "></line>
+                        <line x1="21.7037395" y1="16.765242" x2="21.1749027" y2="20.8945765" id="路径-3" transform="translate(21.439321, 18.829909) rotate(-206.000000) translate(-21.439321, -18.829909) "></line>
+                        <line x1="17.899137" y1="20.9739301" x2="22.1465549" y2="21.7729382" id="路径-3" transform="translate(20.022846, 21.373434) rotate(-206.000000) translate(-20.022846, -21.373434) "></line>
+                    </g>
+                    <text id="Token-B-reserve" transform="translate(10.479362, 78.445992) rotate(-90.000000) translate(-10.479362, -78.445992) " font-family="PingFangSC-Medium, PingFang SC" font-size="14.4288613" font-weight="400" fill="#121C41">
+                        <tspan x="-44.7527295" y="83.4459923">Token B reserve</tspan>
+                    </text>
+                    <text id="Token-A-reserve" transform="translate(98.715251, 151.155080) rotate(-360.000000) translate(-98.715251, -151.155080) " font-family="PingFangSC-Medium, PingFang SC" font-size="14.4288613" font-weight="400" fill="#121C41">
+                        <tspan x="43.6707346" y="156.15508">Token A reserve</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="38px" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 22</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#C1A5F5" offset="0%"></stop>
+            <stop stop-color="#8E6CE8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="-50.313816%" x2="50%" y2="106.824141%" id="linearGradient-2">
+            <stop stop-color="#A38AEC" offset="0%"></stop>
+            <stop stop-color="#CCBEF7" offset="41.740034%"></stop>
+            <stop stop-color="#E7E0FF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#C1A5F5" offset="0%"></stop>
+            <stop stop-color="#8E6CE8" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-41.6%" y="-41.1%" width="183.2%" height="182.2%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="1.6875" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板" transform="translate(-236.000000, -918.000000)">
+            <g id="编组-22" transform="translate(236.000000, 918.000000)">
+                <path d="M27.3099442,16.1947854 L28.625,16.1947854 C30.488961,16.1947854 32,17.6995755 32,19.5558283 L32,29.6389571 C32,31.4952098 30.488961,33 28.625,33 L18.5,33 C16.636039,33 15.125,31.4952098 15.125,29.6389571 L15.125,28.9702297 C20.0936202,28.9702297 23.1931276,28.9702297 24.4235222,28.9702297 C25.1259527,28.9702297 26.6574074,29.0325697 27.0250795,28.2809956 C27.2701942,27.7799462 27.3651491,27.0547635 27.3099442,26.1054477" id="路径" fill="url(#linearGradient-1)"></path>
+                <path d="M25.25,5.31211108 C25.7851332,5.31211108 26.2696055,5.52901668 26.6202944,5.8797056 C26.9709833,6.23039452 27.1878889,6.71486675 27.1878889,7.25 L27.1878889,7.25 L27.1878889,26.8287833 C27.1878889,27.3639165 26.9709833,27.8483887 26.6202944,28.1990777 C26.2696055,28.5497666 25.7851332,28.7666722 25.25,28.7666722 L25.25,28.7666722 L7.25,28.7666722 C6.71486675,28.7666722 6.23039452,28.5497666 5.8797056,28.1990777 C5.52901668,27.8483887 5.31211108,27.3639165 5.31211108,26.8287833 L5.31211108,26.8287833 L5.31211108,7.25 C5.31211108,6.71486675 5.52901668,6.23039452 5.8797056,5.8797056 C6.23039452,5.52901668 6.71486675,5.31211108 7.25,5.31211108 L7.25,5.31211108 Z" id="矩形" stroke="#E4DBFF" stroke-width="0.624222154" fill="url(#linearGradient-2)" opacity="0.435274346"></path>
+                <path d="M15.125,28.5186094 L15.125,19.5558283 C15.125,17.6995755 16.636039,16.1947854 18.5,16.1947854 L27.2960105,16.1947854 L27.2960105,28.5186094 L15.125,28.5186094 Z" id="路径" fill="url(#linearGradient-3)" filter="url(#filter-4)"></path>
+                <rect id="矩形" fill="#FFFFFF" x="11.75" y="15.0744377" width="9" height="3.36104293" rx="1.68052146"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

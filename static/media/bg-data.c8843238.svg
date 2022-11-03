@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="361px" height="197px" viewBox="0 0 361 197" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>shuju-bg</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="296" height="196" rx="25.5143541"></rect>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-62.2%" y="-62.2%" width="224.4%" height="224.4%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="17" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-98.1%" y="-98.1%" width="296.3%" height="296.3%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="18.3188406" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页" transform="translate(-1269.000000, -78.000000)">
+            <g id="标语" transform="translate(530.000000, 78.000000)">
+                <g id="shuju-bg" transform="translate(739.000000, 0.000000)">
+                    <circle id="椭圆形" fill="#E1CFFF" cx="320" cy="129.979284" r="41"></circle>
+                    <circle id="椭圆形" fill="#9DC0F9" opacity="0.5" cx="28" cy="46.9792841" r="28"></circle>
+                    <g id="编组-11" transform="translate(27.414229, 0.275727)">
+                        <mask id="mask-3" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="矩形" fill="#FDFDFE" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <circle id="椭圆形" fill="#E1CFFF" filter="url(#filter-4)" mask="url(#mask-3)" cx="292.585771" cy="129.703557" r="41"></circle>
+                        <circle id="椭圆形" fill="#9DC0F9" opacity="0.5" filter="url(#filter-5)" mask="url(#mask-3)" cx="0.585770751" cy="46.7035573" r="28"></circle>
+                        <rect id="矩形" stroke="#FFFFFF" stroke-width="1.2757177" opacity="0.600000024" mask="url(#mask-3)" x="0.637858852" y="0.637858852" width="294.724282" height="194.724282" rx="25.5143541"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
