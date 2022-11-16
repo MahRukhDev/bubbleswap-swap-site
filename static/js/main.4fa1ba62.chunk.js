@@ -8463,9 +8463,9 @@
           "img",
           pr(
             {
-              width: 24,
+              width: 12,
               height: 24,
-              viewBox: "0 0 24 24",
+              viewBox: "0 0 12 24",
               src: "/dot.png",
             },
             i
@@ -19320,8 +19320,7 @@
         ),
         Fg = be.default.div.withConfig({ componentId: "sc-w04zhs-4" })(
           [
-            "align-items:flex-start;background-color:",
-            ";box-shadow:0px 0px 1px rgba(0,0,0,0.01),0px 4px 8px rgba(0,0,0,0.04),0px 16px 24px rgba(0,0,0,0.04),0px 24px 32px rgba(0,0,0,0.01);border-radius:20px;display:flex;flex-direction:column;font-size:16px;overflow:auto;padding:16px;& > *:not(:last-child){margin-bottom:12px;}",
+            "align-items:flex-start;background-color:#ffffff00; border-radius:20px;display:flex;flex-direction:column;font-size:16px;overflow:auto;padding:16px;& > *:not(:last-child){margin-bottom:12px;}",
           ],
           function (e) {
             return e.theme.deprecated_bg0;
@@ -19685,8 +19684,7 @@
           componentId: "sc-pradxg-3",
         })(
           [
-            "justify-self:center;background-color:",
-            ";width:max-content;padding:2px;border-radius:16px;display:ROW;grid-auto-flow:column;grid-gap:10px;overflow:auto;align-items:center;",
+            "justify-self:center;background-color:#48484800;width:max-content;padding:2px;border-radius:16px;display:ROW;grid-auto-flow:column;grid-gap:10px;overflow:auto;align-items:center;",
             ";",
             ";",
             ";",
@@ -23940,7 +23938,7 @@
           }
         ),
         ap = be.default.text.withConfig({ componentId: "sc-1hckctp-4" })(
-          ["text-anchor:middle;font-size:13px;fill:", ";"],
+          ["text-anchor:middle;font-size:13px;fill:#fff9f9;"],
           function (e) {
             return e.theme.deprecated_text1;
           }
@@ -25578,7 +25576,7 @@
         }),
         ej = Object(be.default)(Ge.t.DeprecatedWhite).withConfig({
           componentId: "sc-kflffs-5",
-        })(["color:", " !important;"], function (e) {
+        })(["color:#f9e8e8 !important;"], function (e) {
           var t = e.theme;
           return e.disabled ? t.deprecated_text2 : t.deprecated_text1;
         }),
@@ -79329,7 +79327,7 @@
                 deprecated_primary3: e ? "#4D8FEA" : "#FF99C9",
                 deprecated_primary4: e ? "#376bad70" : "#F6DDE8",
                 deprecated_primary5: e ? "#a59ef7" : "#FDEAF1",
-                deprecated_primaryText1: e ? "#172a54" : "#D50066",
+                deprecated_primaryText1: e ? "#172a54" : "#4d2ea8",
                 deprecated_secondary1: e ? "#7c5afc" : "#7855e1",
                 deprecated_secondary2: e ? "#17000b26" : "#F6DDE8",
                 deprecated_secondary3: e ? "#17000b26" : "#FDEAF1",
