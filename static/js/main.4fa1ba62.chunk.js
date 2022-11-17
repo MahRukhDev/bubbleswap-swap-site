@@ -39351,7 +39351,7 @@
         ]),
         rv = be.default.div.withConfig({ componentId: "sc-1dv6j2d-1" })(
           [
-            "display:flex;flex-direction:column;width:100%; padding: 123px 9px ;align-items:center;flex:1;",
+            "display:flex;flex-direction:column;width:100%; padding: 170px 9px ;align-items:center;flex:1;",
             ";",
           ],
           function (e) {
