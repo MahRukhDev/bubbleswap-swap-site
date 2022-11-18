@@ -13041,8 +13041,7 @@
         })(
           [
             "margin:0 0.25rem 0 0.35rem;height:35%;margin-left:",
-            ";path{stroke:",
-            ";stroke-width:",
+            ";path{stroke:#280d7a;stroke-width:",
             ";}",
           ],
           function (e) {
@@ -59047,7 +59046,7 @@
           r ||
             (r = i.createElement("path", {
               d: "M0.97168 1L6.20532 6L11.439 1",
-              stroke: "#1e1f68",
+              stroke: "#1f2072",
             }))
         );
       }
