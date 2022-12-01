@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html translate="no">
+  <head>
+    <meta charset="utf-8" />
+    <title>BUBBLESWAP</title>
+    <meta
+      name="description"
+      content="Swap or provide liquidity on the BubbleSwap Protocol"
+    />
+    <link rel="shortcut icon" type="image/png" href="./icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="192x192"
+      href="./images/192x192_App_Icon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="512x512"
+      href="./images/512x512_App_Icon.png"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <meta name="theme-color" content="#ff007a" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="preconnect" href="https://www.google-analytics.com/" />
+    <link
+      rel="preload"
+      href="./fonts/Inter-roman.var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <style>
+      * {
+        font-family: Inter, sans-serif;
+        box-sizing: border-box;
+      }
+      @font-face {
+        font-family: "Inter custom";
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: block;
+        font-named-instance: Regular;
+        src: url(fonts/Inter-roman.var.woff2)
+            format("woff2 supports variations(gvar)"),
+          url(fonts/Inter-roman.var.woff2) format("woff2-variations"),
+          url(fonts/Inter-roman.var.woff2) format("woff2");
+      }
+      @supports (font-variation-settings: normal) {
+        * {
+          font-family: "Inter custom", sans-serif;
+        }
+      }
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+      }
+      button {
+        user-select: none;
+      }
+      html {
+        font-size: 16px;
+        font-variant: none;
+        font-smooth: always;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-tap-highlight-color: transparent;
+        font-feature-settings: "ss01" on, "ss02" on, "cv01" on, "cv03" on;
+      }
+      #background-radial-gradient {
+        position: fixed;
+        background-image: url(/static/media/bg.png);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0px;
+        pointer-events: none;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        html {
+          background-color: #21242900;
+        }
+      }
+      @media (prefers-color-scheme: light) {
+        html {
+          background-color: #ede7ff;
+          background-image: url(/static/media/bg.png);
+        }
+      }
+
+      .sidenav {
+        width: 130px;
+        position: fixed;
+        z-index: 1;
+        top: 64px;
+        left: 43px;
+        width: 95px;
+        height: 600px;
+        background: #ffffff;
+        border-radius: 54px;
+        opacity: 2.49;
+        overflow-x: hidden;
+        padding: 8px 0;
+      }
+
+      .sidenav a {
+        padding: 22px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 14px;
+        color: #3e2098;
+        text-align: center;
+        display: block;
+      }
+      .mobileShow {
+        display: none;
+      }
+      .sidenav a:hover {
+        color: #653ddc;
+        width: 80px;
+        height: 97px;
+        background: #ffffff;
+        box-shadow: 0px 0px 20px 0px rgba(149, 158, 207, 0.5),
+          inset 1px 1px 4px 3px #cca1fa;
+        border-radius: 40px;
+        opacity: 2.49;
+        filter: blur(0px);
+      }
+
+      .main {
+        margin-left: 140px; /* Same width as the sidebar + left position in px */
+        font-size: 28px; /* Increased text to enable scrolling */
+        padding: 0px 10px;
+      }
+
+      @media screen and (max-width: 700px) {
+        .sidenav {
+          width: 20%;
+          height: auto;
+          position: fixed;
+          display: block;
+          align-items: verticla;
+        }
+        .sidenav a {
+          float: left;
+        }
+        div.content {
+          margin-left: 0;
+        }
+      }
+      @media screen and (max-height: 450px) {
+        .sidenav {
+          padding-top: 15px;
+          display: row;
+        }
+        .sidenav a {
+          font-size: 18px;
+        }
+      }
+      @media screen and (max-width: 400px) {
+        .sidevac a {
+          text-align: center;
+          float: none;
+          display: table-row;
+        }
+      }
+
+      #content-desktop {
+        display: block;
+      }
+      #content-mobile {
+        display: none;
+      }
+
+      @media screen and (max-width: 768px) {
+        #content-desktop {
+          display: none;
+        }
+        #content-mobile {
+          display: block;
+        }
+      }
+
+      .top {
+        color: #3e2098;
+        background: white;
+        border-radius: 25px;
+        font-size: 8px;
+        width: 380px;
+        position: absolute;
+        padding: 10px;
+      }
+
+      .top a {
+        padding: 0px 15px 0px 29px;
+        text-decoration: none;
+        margin: 8px -31px 0px 15px;
+        font-size: 9px;
+        color: #3e2098;
+        text-align: center;
+        display: inline;
+      }
+
+      /* Boring button styles */
+      a.button {
+        /* Frame */
+        display: inline-block;
+        padding: 20px 28px;
+        border-radius: 50px;
+        box-sizing: border-box;
+
+        /* Style */
+        border: none;
+
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      a.button:active {
+        filter: brightness(75%);
+      }
+
+      /* Dropdown styles */
+      .dropdown {
+        position: relative;
+        padding: 0;
+        margin-right: 1em;
+
+        border: none;
+      }
+
+      .dropdown summary {
+        list-style: none;
+        list-style-type: none;
+      }
+
+      .dropdown > summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .dropdown summary:focus {
+        outline: none;
+      }
+
+      .dropdown summary:focus a.button {
+        border: 2px solid white;
+      }
+
+      .dropdown summary:focus {
+        outline: none;
+      }
+
+      .dropdown ul {
+        position: fixed;
+        margin: -280px 0px 0px 0px;
+        background-color: #ffffff;
+        color: #44146b;
+        padding: 14px 0;
+        width: var(--dropdown-width);
+        left: 11%;
+        margin-left: calc((var(--dropdown-width) / 2) * -1);
+        box-sizing: border-box;
+        z-index: 9;
+
+        border-radius: 12px;
+        list-style: none;
+      }
+      .dropdown ul a:hover {
+        color: #653ddc;
+        width: 80px;
+        height: 37px;
+        background: #ffffff;
+        box-shadow: 0px 0px 20px 0px rgba(149, 158, 207, 0.5),
+          inset 1px 1px 4px 3px #cca1fa;
+        border-radius: 40px;
+        opacity: 2.49;
+        filter: blur(0px);
+      }
+
+      .dropdown ul li {
+        padding: 0;
+        margin: 0;
+      }
+
+      .dropdown ul li a:link,
+      .dropdown ul li a:visited {
+        display: inline-block;
+        padding: 10px 0.8rem;
+        width: 100%;
+        text-align: left;
+        box-sizing: border-box;
+
+        color: var(--dropdown-color);
+        text-decoration: none;
+      }
+
+      /* Close the dropdown with outside clicks */
+      .dropdown > summary::before {
+        display: none;
+      }
+
+      .dropdown[open] > summary::before {
+        content: " ";
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+      }
+    </style>
+    <link href="./static/css/7.ee5e4204.chunk.css" rel="stylesheet" />
+  </head>
+  <body>
+    <script>
+      window.__isDocumentCached = true;
+    </script>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <div id="root"><div>&emsp;</div></div>
+
+    <div id="content-desktop" class="sidenav">
+      <a href="/home.html"
+        ><img src="/icons/home.png" style="width: 52px; height: 52px" />Home</a
+      >
+      <a href="/index.html#/swap"
+        ><img src="/icons/swap.png" style="width: 52px; height: 52px" />Swap</a
+      >
+      <a href="/index.html#/pool">
+        <img src="/icons/liq.png" style="width: 42px; height: 42px" />
+        Liquidity</a
+      >
+      <a href="https://bubbleswapdao.netlify.app/#/1/earn/farming"
+        ><img
+          src="/icons/mining.png"
+          style="width: 42px; height: 42px"
+        />Mining</a
+      >
+      <a href="https://bubbleswapdao.netlify.app/#/1/dao/staking">
+        <img src="/icons/dao.png" style="width: 52px; height: 52px" />Stake</a
+      >
+
+      <details class="dropdown">
+        <summary role="button">
+          <a>
+            <img
+              src="/icons/more.png"
+              style="width: 52px; height: 42px"
+            />More</a
+          >
+        </summary>
+        <ul>
+          <li>
+            <a href="https://github.com/bubbledex">
+              <img
+                src="/icons/contract.png"
+                style="width: 22px; height: 22px; margin: -2px 17px -7px 0px"
+              />
+              Smart Contract</a
+            >
+          </li>
+          <li>
+            <a href="https://www.certik.com/bubbleswap">
+              <img
+                src="/icons/audit.png"
+                style="width: 22px; height: 22px; margin: -2px 17px -7px 0px"
+              />
+              Audit</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="/icons/chart.png"
+                style="width: 22px; height: 22px; margin: -2px 17px -7px 0px"
+              />
+              Chart</a
+            >
+          </li>
+          <li>
+            <a href="https://twitter.com/bubbleswapdao">
+              <img
+                src="/icons/twitter.png"
+                style="width: 22px; height: 22px; margin: -2px 17px -7px 0px"
+              />
+              Twitter</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="/icons/tele.png"
+                style="width: 22px; height: 22px; margin: -2px 17px -7px 0px"
+              />Telegram</a
+            >
+          </li>
+          <li>
+            <a href="https://discord.com/invite/KYThgn597y">
+              <img
+                src="/icons/discord.png"
+                style="width: 22px; height: 22px; margin: -2px 17px -7px 0px"
+              />Discord</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="/icons/mail.png"
+                style="width: 22px; height: 22px; margin: -2px 17px -7px 0px"
+              />
+              Contact Us</a
+            >
+          </li>
+        </ul>
+      </details>
+    </div>
+
+    <div id="content-mobile" class="top">
+      <a href="home.html"
+        ><img
+          src="/icons/home.png"
+          style="width: 32px; height: 32px; margin: 0px -26px 11px 0px"
+        />Home</a
+      >
+      <a href="/index.html#/swap"
+        ><img
+          src="/icons/swap.png"
+          style="width: 32px; height: 32px; margin: 0px -26px 11px 0px"
+        />Swap</a
+      >
+      <a href="/index.html#/pool">
+        <img
+          src="/icons/liq.png"
+          style="width: 32px; height: 32px; margin: 0px -26px 11px 0px"
+        />
+        Liquidity</a
+      >
+      <a href="https://bubbleswapdao.netlify.app/#/1/earn/farming"
+        ><img
+          src="/icons/mining.png"
+          style="width: 32px; height: 32px; margin: 0px -26px 11px 0px"
+        />Mining</a
+      >
+      <a href="https://bubbleswapdao.netlify.app/#/1/dao/staking">
+        <img
+          src="/icons/dao.png"
+          style="width: 32px; height: 32px; margin: 0px -26px 11px 0px"
+        />Stake</a
+      >
+    </div>
+
+    <script>
+      !(function (e) {
+        function c(c) {
+          for (
+            var d, t, a = c[0], o = c[1], u = c[2], i = 0, b = [];
+            i < a.length;
+            i++
+          )
+            (t = a[i]),
+              Object.prototype.hasOwnProperty.call(r, t) &&
+                r[t] &&
+                b.push(r[t][0]),
+              (r[t] = 0);
+          for (d in o)
+            Object.prototype.hasOwnProperty.call(o, d) && (e[d] = o[d]);
+          for (l && l(c); b.length; ) b.shift()();
+          return n.push.apply(n, u || []), f();
+        }
+        function f() {
+          for (var e, c = 0; c < n.length; c++) {
+            for (var f = n[c], d = !0, t = 1; t < f.length; t++) {
+              var o = f[t];
+              0 !== r[o] && (d = !1);
+            }
+            d && (n.splice(c--, 1), (e = a((a.s = f[0]))));
+          }
+          return e;
+        }
+        var d = {},
+          t = { 6: 0 },
+          r = { 6: 0 },
+          n = [];
+        function a(c) {
+          if (d[c]) return d[c].exports;
+          var f = (d[c] = { i: c, l: !1, exports: {} });
+          return e[c].call(f.exports, f, f.exports, a), (f.l = !0), f.exports;
+        }
+        (a.e = function (e) {
+          var c = [];
+          t[e]
+            ? c.push(t[e])
+            : 0 !== t[e] &&
+              { 3: 1, 4: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1 }[
+                e
+              ] &&
+              c.push(
+                (t[e] = new Promise(function (c, f) {
+                  for (
+                    var d =
+                        "static/css/" +
+                        ({}[e] || e) +
+                        "." +
+                        {
+                          0: "31d6cfe0",
+                          1: "31d6cfe0",
+                          2: "31d6cfe0",
+                          3: "a4d5b296",
+                          4: "f85f6e9c",
+                          8: "14c5ec01",
+                          9: "01510149",
+                          10: "8b6a2bd5",
+                          11: "97aa1abe",
+                          12: "6a22c4f2",
+                          13: "ef182c55",
+                          14: "d8166929",
+                          15: "31d6cfe0",
+                          16: "31d6cfe0",
+                          17: "31d6cfe0",
+                          18: "31d6cfe0",
+                          19: "31d6cfe0",
+                          20: "31d6cfe0",
+                          21: "31d6cfe0",
+                          22: "31d6cfe0",
+                          23: "31d6cfe0",
+                          24: "31d6cfe0",
+                          25: "31d6cfe0",
+                          26: "31d6cfe0",
+                          27: "31d6cfe0",
+                          28: "31d6cfe0",
+                          29: "31d6cfe0",
+                          30: "31d6cfe0",
+                          31: "31d6cfe0",
+                          32: "31d6cfe0",
+                          33: "31d6cfe0",
+                          34: "31d6cfe0",
+                          35: "31d6cfe0",
+                          36: "31d6cfe0",
+                          37: "31d6cfe0",
+                          38: "31d6cfe0",
+                          39: "31d6cfe0",
+                          40: "31d6cfe0",
+                          41: "31d6cfe0",
+                          42: "31d6cfe0",
+                          43: "31d6cfe0",
+                          44: "31d6cfe0",
+                          45: "31d6cfe0",
+                          46: "31d6cfe0",
+                          47: "31d6cfe0",
+                          48: "31d6cfe0",
+                          49: "31d6cfe0",
+                          50: "31d6cfe0",
+                          51: "31d6cfe0",
+                          52: "31d6cfe0",
+                          53: "31d6cfe0",
+                          54: "31d6cfe0",
+                          55: "31d6cfe0",
+                          56: "31d6cfe0",
+                          57: "31d6cfe0",
+                          58: "31d6cfe0",
+                          59: "31d6cfe0",
+                          60: "31d6cfe0",
+                          61: "31d6cfe0",
+                          62: "31d6cfe0",
+                          63: "31d6cfe0",
+                          64: "31d6cfe0",
+                          65: "31d6cfe0",
+                          66: "31d6cfe0",
+                          67: "31d6cfe0",
+                          68: "31d6cfe0",
+                          69: "31d6cfe0",
+                          70: "31d6cfe0",
+                          71: "31d6cfe0",
+                          72: "31d6cfe0",
+                          73: "31d6cfe0",
+                          74: "31d6cfe0",
+                          75: "31d6cfe0",
+                          76: "31d6cfe0",
+                          77: "31d6cfe0",
+                          78: "31d6cfe0",
+                          79: "31d6cfe0",
+                          80: "31d6cfe0",
+                          81: "31d6cfe0",
+                          82: "31d6cfe0",
+                          83: "31d6cfe0",
+                          84: "31d6cfe0",
+                          85: "31d6cfe0",
+                          86: "31d6cfe0",
+                        }[e] +
+                        ".chunk.css",
+                      r = a.p + d,
+                      n = document.getElementsByTagName("link"),
+                      o = 0;
+                    o < n.length;
+                    o++
+                  ) {
+                    var u =
+                      (l = n[o]).getAttribute("data-href") ||
+                      l.getAttribute("href");
+                    if ("stylesheet" === l.rel && (u === d || u === r))
+                      return c();
+                  }
+                  var i = document.getElementsByTagName("style");
+                  for (o = 0; o < i.length; o++) {
+                    var l;
+                    if (
+                      (u = (l = i[o]).getAttribute("data-href")) === d ||
+                      u === r
+                    )
+                      return c();
+                  }
+                  var b = document.createElement("link");
+                  (b.rel = "stylesheet"),
+                    (b.type = "text/css"),
+                    (b.onload = c),
+                    (b.onerror = function (c) {
+                      var d = (c && c.target && c.target.src) || r,
+                        n = new Error(
+                          "Loading CSS chunk " + e + " failed.\n(" + d + ")"
+                        );
+                      (n.code = "CSS_CHUNK_LOAD_FAILED"),
+                        (n.request = d),
+                        delete t[e],
+                        b.parentNode.removeChild(b),
+                        f(n);
+                    }),
+                    (b.href = r),
+                    document.getElementsByTagName("head")[0].appendChild(b);
+                }).then(function () {
+                  t[e] = 0;
+                }))
+              );
+          var f = r[e];
+          if (0 !== f)
+            if (f) c.push(f[2]);
+            else {
+              var d = new Promise(function (c, d) {
+                f = r[e] = [c, d];
+              });
+              c.push((f[2] = d));
+              var n,
+                o = document.createElement("script");
+              (o.charset = "utf-8"),
+                (o.timeout = 120),
+                a.nc && o.setAttribute("nonce", a.nc),
+                (o.src = (function (e) {
+                  return (
+                    a.p +
+                    "static/js/" +
+                    ({}[e] || e) +
+                    "." +
+                    {
+                      0: "ca77722b",
+                      1: "588484ae",
+                      2: "5d499f7a",
+                      3: "b96e2ffa",
+                      4: "e4fe6f3c",
+                      8: "e2f220c3",
+                      9: "60ae20cd",
+                      10: "27c56db9",
+                      11: "1cb506ca",
+                      12: "06d442b3",
+                      13: "c5d39076",
+                      14: "1e9ddedf",
+                      15: "2d4a55c2",
+                      16: "e00456f8",
+                      17: "2dbb4cf7",
+                      18: "4cf79927",
+                      19: "600fe4c7",
+                      20: "bc0be86c",
+                      21: "f810350f",
+                      22: "df768449",
+                      23: "87bb0e4c",
+                      24: "b949cf55",
+                      25: "85c3801c",
+                      26: "2ec1ed47",
+                      27: "d20323f8",
+                      28: "23951c63",
+                      29: "a2a6bd27",
+                      30: "7e3f6621",
+                      31: "fe453349",
+                      32: "10ddd734",
+                      33: "21db4f58",
+                      34: "bb156246",
+                      35: "b7faec93",
+                      36: "efc92a90",
+                      37: "c462cea3",
+                      38: "2cdf3f43",
+                      39: "9d638390",
+                      40: "dac19bf2",
+                      41: "66e394d7",
+                      42: "080e7935",
+                      43: "82f32d2b",
+                      44: "0382762f",
+                      45: "5d30ad23",
+                      46: "5c65f504",
+                      47: "8dc72525",
+                      48: "fe166414",
+                      49: "b610e9f3",
+                      50: "bb852cea",
+                      51: "d8817aed",
+                      52: "cd507376",
+                      53: "9244da20",
+                      54: "54dcdc61",
+                      55: "5bf2b26f",
+                      56: "a6abc1b4",
+                      57: "cd61c476",
+                      58: "80f8dd28",
+                      59: "a93616b4",
+                      60: "595c43e2",
+                      61: "17099fdf",
+                      62: "86c37c38",
+                      63: "b033eb1c",
+                      64: "50ed6fa3",
+                      65: "c7020991",
+                      66: "4f1b7f30",
+                      67: "3d610e9b",
+                      68: "3f06c3d1",
+                      69: "4eb5ce6b",
+                      70: "1a796286",
+                      71: "c8ef7028",
+                      72: "9bde228b",
+                      73: "7152080e",
+                      74: "3af88496",
+                      75: "a69d799a",
+                      76: "0bb29cf1",
+                      77: "98f03c95",
+                      78: "23d90d1a",
+                      79: "577dd218",
+                      80: "43722410",
+                      81: "b4423ac4",
+                      82: "a56507ae",
+                      83: "f2ff959a",
+                      84: "731ed3bf",
+                      85: "00255050",
+                      86: "bd7132f6",
+                    }[e] +
+                    ".chunk.js"
+                  );
+                })(e));
+              var u = new Error();
+              n = function (c) {
+                (o.onerror = o.onload = null), clearTimeout(i);
+                var f = r[e];
+                if (0 !== f) {
+                  if (f) {
+                    var d = c && ("load" === c.type ? "missing" : c.type),
+                      t = c && c.target && c.target.src;
+                    (u.message =
+                      "Loading chunk " +
+                      e +
+                      " failed.\n(" +
+                      d +
+                      ": " +
+                      t +
+                      ")"),
+                      (u.name = "ChunkLoadError"),
+                      (u.type = d),
+                      (u.request = t),
+                      f[1](u);
+                  }
+                  r[e] = void 0;
+                }
+              };
+              var i = setTimeout(function () {
+                n({ type: "timeout", target: o });
+              }, 12e4);
+              (o.onerror = o.onload = n), document.head.appendChild(o);
+            }
+          return Promise.all(c);
+        }),
+          (a.m = e),
+          (a.c = d),
+          (a.d = function (e, c, f) {
+            a.o(e, c) ||
+              Object.defineProperty(e, c, { enumerable: !0, get: f });
+          }),
+          (a.r = function (e) {
+            "undefined" != typeof Symbol &&
+              Symbol.toStringTag &&
+              Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
+              Object.defineProperty(e, "__esModule", { value: !0 });
+          }),
+          (a.t = function (e, c) {
+            if ((1 & c && (e = a(e)), 8 & c)) return e;
+            if (4 & c && "object" == typeof e && e && e.__esModule) return e;
+            var f = Object.create(null);
+            if (
+              (a.r(f),
+              Object.defineProperty(f, "default", { enumerable: !0, value: e }),
+              2 & c && "string" != typeof e)
+            )
+              for (var d in e)
+                a.d(
+                  f,
+                  d,
+                  function (c) {
+                    return e[c];
+                  }.bind(null, d)
+                );
+            return f;
+          }),
+          (a.n = function (e) {
+            var c =
+              e && e.__esModule
+                ? function () {
+                    return e.default;
+                  }
+                : function () {
+                    return e;
+                  };
+            return a.d(c, "a", c), c;
+          }),
+          (a.o = function (e, c) {
+            return Object.prototype.hasOwnProperty.call(e, c);
+          }),
+          (a.p = "/"),
+          (a.oe = function (e) {
+            throw (console.error(e), e);
+          });
+        var o = (this["webpackJsonp@uniswap/interface"] =
+            this["webpackJsonp@uniswap/interface"] || []),
+          u = o.push.bind(o);
+        (o.push = c), (o = o.slice());
+        for (var i = 0; i < o.length; i++) c(o[i]);
+        var l = u;
+        f();
+      })([]);
+    </script>
+    <script src="./static/js/7.81ee2bd3.chunk.js"></script>
+    <script src="./static/js/main.4fa1ba62.chunk.js"></script>
+  </body>
+</html>
