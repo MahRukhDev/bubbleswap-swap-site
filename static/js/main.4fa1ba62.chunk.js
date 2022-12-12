@@ -57,7 +57,7 @@
         return !!e && !!i[e];
       }
       var l = [i.MAINNET],
-        d = [i.POLYGON, i.OPTIMISM, i.ARBITRUM_ONE],
+        d = [i.POLYGON, i.ARBITRUM_ONE],
         u = [
           i.ROPSTEN,
           i.RINKEBY,
@@ -67,7 +67,7 @@
           i.OPTIMISM_GOERLI,
         ],
         g = [i.MAINNET],
-        b = [i.ARBITRUM_ONE, i.ARBITRUM_RINKEBY, i.OPTIMISM, i.OPTIMISM_GOERLI];
+        b = [i.ARBITRUM_ONE, i.ARBITRUM_RINKEBY, i.OPTIMISM_GOERLI];
     },
     100: function (e, t, n) {
       "use strict";
@@ -169,11 +169,10 @@
         Object(a.a)(r, g.f.OPTIMISM, {
           networkType: i.L2,
           blockWaitMsBeforeWarning: 15e5,
-          bridge: "",
+          bridge: "Georli",
           defaultListUrl: b.e,
           nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
           color: u.b.chain_10,
-          backgroundColor: u.b.chain_10_background,
         }),
         Object(a.a)(r, g.f.ARBITRUM_ONE, {
           networkType: i.L2,
@@ -5399,11 +5398,6 @@
             u.f.OPTIMISM,
             a.CurrencyAmount.fromRawAmount(g.i, 1e22)
           ),
-          Object(i.a)(
-            r,
-            u.f.POLYGON,
-            a.CurrencyAmount.fromRawAmount(g.x, 1e10)
-          ),
           Object(i.a)(r, u.f.CELO, a.CurrencyAmount.fromRawAmount(g.e, 1e22)),
           r);
       function f(e) {
@@ -6941,13 +6935,13 @@
                 ],
               }),
               Object(R.jsx)(ft, {
-                toCopy: "compliance@uniswap.org",
+                toCopy: "@",
                 fontSize: 14,
                 iconSize: 16,
                 gap: 6,
                 color: t.deprecated_primary1,
                 iconPosition: "right",
-                children: "compliance@uniswap.org",
+                children: "@",
               }),
             ],
           }),
@@ -10559,48 +10553,12 @@
         ]),
         xo =
           ((no = {}),
-          Object(ve.a)(no, q.f.OPTIMISM, !0),
-          Object(ve.a)(no, q.f.OPTIMISM_GOERLI, !0),
           Object(ve.a)(no, q.f.ARBITRUM_ONE, !0),
           Object(ve.a)(no, q.f.ARBITRUM_RINKEBY, !0),
-          Object(ve.a)(no, q.f.POLYGON, !0),
-          Object(ve.a)(no, q.f.POLYGON_MUMBAI, !0),
-          Object(ve.a)(no, q.f.CELO, !0),
-          Object(ve.a)(no, q.f.CELO_ALFAJORES, !0),
           no),
         wo = {
           dark:
             ((ro = {}),
-            Object(ve.a)(
-              ro,
-              q.f.POLYGON,
-              "radial-gradient(100% 93.36% at 0% 6.64%, rgba(160, 108, 247, 0.1) 0%, rgba(82, 32, 166, 0.1) 100%)"
-            ),
-            Object(ve.a)(
-              ro,
-              q.f.POLYGON_MUMBAI,
-              "radial-gradient(100% 93.36% at 0% 6.64%, rgba(160, 108, 247, 0.1) 0%, rgba(82, 32, 166, 0.1) 100%)"
-            ),
-            Object(ve.a)(
-              ro,
-              q.f.CELO,
-              "radial-gradient(182.71% 150.59% at 2.81% 7.69%, rgba(90, 190, 170, 0.15) 0%, rgba(80, 160, 40, 0.15) 100%)"
-            ),
-            Object(ve.a)(
-              ro,
-              q.f.CELO_ALFAJORES,
-              "radial-gradient(182.71% 150.59% at 2.81% 7.69%, rgba(90, 190, 170, 0.15) 0%, rgba(80, 160, 40, 0.15) 100%)"
-            ),
-            Object(ve.a)(
-              ro,
-              q.f.OPTIMISM,
-              "radial-gradient(948% 292% at 42% 0%, rgba(255, 58, 212, 0.01) 0%, rgba(255, 255, 255, 0.04) 100%),radial-gradient(98% 96% at 2% 0%, rgba(255, 39, 39, 0.01) 0%, rgba(235, 0, 255, 0.01) 96%)"
-            ),
-            Object(ve.a)(
-              ro,
-              q.f.OPTIMISM_GOERLI,
-              "radial-gradient(948% 292% at 42% 0%, rgba(255, 58, 212, 0.04) 0%, rgba(255, 255, 255, 0.04) 100%),radial-gradient(98% 96% at 2% 0%, rgba(255, 39, 39, 0.04) 0%, rgba(235, 0, 255, 0.01 96%)"
-            ),
             Object(ve.a)(
               ro,
               q.f.ARBITRUM_ONE,
@@ -10614,36 +10572,6 @@
             ro),
           light:
             ((io = {}),
-            Object(ve.a)(
-              io,
-              q.f.POLYGON,
-              "radial-gradient(182.71% 205.59% at 2.81% 7.69%, rgba(130, 71, 229, 0.2) 0%, rgba(167, 202, 255, 0.2) 100%)"
-            ),
-            Object(ve.a)(
-              io,
-              q.f.POLYGON_MUMBAI,
-              "radial-gradient(182.71% 205.59% at 2.81% 7.69%, rgba(130, 71, 229, 0.2) 0%, rgba(167, 202, 255, 0.2) 100%)"
-            ),
-            Object(ve.a)(
-              io,
-              q.f.CELO,
-              "radial-gradient(182.71% 150.59% at 2.81% 7.69%, rgba(63, 208, 137, 0.15) 0%, rgba(49, 205, 50, 0.15) 100%)"
-            ),
-            Object(ve.a)(
-              io,
-              q.f.CELO_ALFAJORES,
-              "radial-gradient(182.71% 150.59% at 2.81% 7.69%, rgba(63, 208, 137, 0.15) 0%, rgba(49, 205, 50, 0.15) 100%)"
-            ),
-            Object(ve.a)(
-              io,
-              q.f.OPTIMISM,
-              "radial-gradient(92% 105% at 50% 7%, rgba(255, 58, 212, 0.04) 0%, rgba(255, 255, 255, 0.03) 100%),radial-gradient(100% 97% at 0% 12%, rgba(235, 0, 255, 0.1) 0%, rgba(243, 19, 19, 0.1) 100%), hsla(0, 0%, 100%, 0.1)"
-            ),
-            Object(ve.a)(
-              io,
-              q.f.OPTIMISM_GOERLI,
-              "radial-gradient(92% 105% at 50% 7%, rgba(255, 58, 212, 0.04) 0%, rgba(255, 255, 255, 0.03) 100%),radial-gradient(100% 97% at 0% 12%, rgba(235, 0, 255, 0.1) 0%, rgba(243, 19, 19, 0.1) 100%), hsla(0, 0%, 100%, 0.1)"
-            ),
             Object(ve.a)(
               io,
               q.f.ARBITRUM_ONE,
@@ -10682,17 +10610,7 @@
         mo = Object(be.default)(uo.a).withConfig({
           componentId: "sc-17mb1wp-7",
         })(["margin-left:12px;width:24px;height:24px;"]),
-        zo =
-          ((ao = {}),
-          Object(ve.a)(ao, q.f.POLYGON, "rgba(130, 71, 229)"),
-          Object(ve.a)(ao, q.f.POLYGON_MUMBAI, "rgba(130, 71, 229)"),
-          Object(ve.a)(ao, q.f.CELO, "rgba(53, 178, 97)"),
-          Object(ve.a)(ao, q.f.CELO_ALFAJORES, "rgba(53, 178, 97)"),
-          Object(ve.a)(ao, q.f.OPTIMISM, "#ff3856"),
-          Object(ve.a)(ao, q.f.OPTIMISM_GOERLI, "#ff3856"),
-          Object(ve.a)(ao, q.f.ARBITRUM_ONE, "#0490ed"),
-          Object(ve.a)(ao, q.f.ARBITRUM_RINKEBY, "#0490ed"),
-          ao);
+        zo = ((ao = {}), Object(ve.a)(ao, q.f.ARBITRUM_RINKEBY, "#0490ed"), ao);
       function Oo() {
         var e = Object(_.useWeb3React)().chainId,
           t = Object(de.d)(),
@@ -19420,15 +19338,9 @@
         ]),
         eb = function (e) {
           switch (e.chainId) {
-            case q.f.OPTIMISM:
-            case q.f.OPTIMISM_GOERLI:
-              return Object(R.jsx)(S.b, { id: "Optimism Bridge" });
             case q.f.POLYGON:
             case q.f.POLYGON_MUMBAI:
               return Object(R.jsx)(S.b, { id: "Polygon Bridge" });
-            case q.f.CELO:
-            case q.f.CELO_ALFAJORES:
-              return Object(R.jsx)(S.b, { id: "Portal Bridge" });
             default:
               return Object(R.jsx)(S.b, { id: "Bridge" });
           }
@@ -19438,15 +19350,10 @@
             case q.f.ARBITRUM_ONE:
             case q.f.ARBITRUM_RINKEBY:
               return Object(R.jsx)(S.b, { id: "Arbiscan" });
-            case q.f.OPTIMISM:
-            case q.f.OPTIMISM_GOERLI:
-              return Object(R.jsx)(S.b, { id: "Optimistic Etherscan" });
+
             case q.f.POLYGON:
             case q.f.POLYGON_MUMBAI:
               return Object(R.jsx)(S.b, { id: "Polygonscan" });
-            case q.f.CELO:
-            case q.f.CELO_ALFAJORES:
-              return Object(R.jsx)(S.b, { id: "Blockscout" });
             default:
               return Object(R.jsx)(S.b, { id: "Etherscan" });
           }
@@ -19527,13 +19434,7 @@
         lb,
         db,
         ub,
-        gb = [
-          q.f.MAINNET,
-          q.f.POLYGON,
-          q.f.OPTIMISM,
-          q.f.ARBITRUM_ONE,
-          q.f.CELO,
-        ];
+        gb = [q.f.MAINNET, q.f.ARBITRUM_ONE];
       function bb() {
         var e = Object(_.useWeb3React)(),
           t = e.chainId,
@@ -20297,13 +20198,7 @@
         );
       });
       lf.displayName = "NavDropdown";
-      var df = [
-          q.f.MAINNET,
-          q.f.POLYGON,
-          q.f.OPTIMISM,
-          q.f.ARBITRUM_ONE,
-          q.f.CELO,
-        ],
+      var df = [q.f.MAINNET, q.f.ARBITRUM_ONE],
         uf = function (e) {
           var t = e.leftAlign,
             n = Object(_.useWeb3React)().chainId,
@@ -22987,26 +22882,6 @@
             q.f.RINKEBY,
             "https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3"
           ),
-          Object(ve.a)(
-            tw,
-            q.f.ARBITRUM_ONE,
-            "https://api.thegraph.com/subgraphs/name/ianlapham/arbitrum-minimal"
-          ),
-          Object(ve.a)(
-            tw,
-            q.f.OPTIMISM,
-            "https://api.thegraph.com/subgraphs/name/ianlapham/optimism-post-regenesis"
-          ),
-          Object(ve.a)(
-            tw,
-            q.f.POLYGON,
-            "https://api.thegraph.com/subgraphs/name/ianlapham/uniswap-v3-polygon"
-          ),
-          Object(ve.a)(
-            tw,
-            q.f.CELO,
-            "https://api.thegraph.com/subgraphs/name/jesse-sawa/uniswap-celo"
-          ),
           tw),
         aw = { Accept: "application/json", "Content-type": "application/json" },
         ow = function (e, t) {
@@ -23467,14 +23342,7 @@
             description: Object(R.jsx)(S.b, {
               id: "Best for very stable pairs.",
             }),
-            supportedChains: [
-              q.f.MAINNET,
-              q.f.POLYGON,
-              q.f.POLYGON_MUMBAI,
-              q.f.CELO,
-              q.f.CELO_ALFAJORES,
-              q.f.OPTIMISM,
-            ],
+            supportedChains: [q.f.MAINNET, q.f.GOERLI],
           }),
           Object(ve.a)(jw, os.FeeAmount.LOW, {
             label: "0.05",
@@ -39791,11 +39659,8 @@
           Object(y.useEffect)(
             function () {
               t &&
-                [q.f.OPTIMISM, q.f.OPTIMISM_GOERLI].includes(t) &&
-                r(Object(wv.d)(bv.e)),
-                t &&
-                  [q.f.ARBITRUM_ONE, q.f.ARBITRUM_RINKEBY].includes(t) &&
-                  r(Object(wv.d)(bv.a)),
+                [q.f.ARBITRUM_ONE, q.f.ARBITRUM_RINKEBY].includes(t) &&
+                r(Object(wv.d)(bv.a)),
                 t && Object(_e.J)(t) && r(Object(wv.d)(bv.b));
             },
             [t, r]
@@ -40002,12 +39867,6 @@
             minWait: 250,
             maxWait: 1e3,
           }),
-          Object(ve.a)(vv, q.f.OPTIMISM_GOERLI, {
-            n: 10,
-            minWait: 250,
-            maxWait: 1e3,
-          }),
-          Object(ve.a)(vv, q.f.OPTIMISM, { n: 10, minWait: 250, maxWait: 1e3 }),
           vv),
         Av = { n: 1, minWait: 0, maxWait: 0 };
       function Iv(e) {
@@ -40354,17 +40213,6 @@
                         : "radial-gradient(150% 100% at 50% 0%, #0A294B 0%, #221E30 50%, #1F2128 100%)";
                     Rv.style.background = n ? i : t;
                     break;
-                  case q.f.OPTIMISM:
-                  case q.f.OPTIMISM_GOERLI:
-                    Lv(_v);
-                    var a = r
-                        ? "radial-gradient(100% 100% at 50% 0%, rgba(255, 251, 242, 0.8) 0%, rgba(255, 244, 249, 0.6958) 50.52%, rgba(255, 255, 255, 0) 100%), #FFFFFF"
-                        : "radial-gradient(150% 100% at 50% 0%, #FFFBF2 2%, #FFF4F9 53%, #FFFFFF 100%)",
-                      o = r
-                        ? "radial-gradient(100% 100% at 50% 0%, rgba(62, 46, 56, 0.8) 0%, rgba(44, 31, 45, 0.6958) 50.52%, rgba(31, 33, 40, 0) 100%), #0D0E0E"
-                        : "radial-gradient(150% 100% at 50% 0%, #3E2E38 2%, #2C1F2D 53%, #1F2128 100%)";
-                    Rv.style.background = n ? o : a;
-                    break;
                   case q.f.POLYGON:
                   case q.f.POLYGON_MUMBAI:
                     Lv(_v);
@@ -40381,22 +40229,7 @@
                         ? "overlay,normal"
                         : "multiply,normal");
                     break;
-                  case q.f.CELO:
-                  case q.f.CELO_ALFAJORES:
-                    Lv(_v);
-                    var l = r
-                        ? "radial-gradient(100% 100% at 50% 0%, rgba(186, 228, 210, 0.7) 0%, rgba(252, 243, 249, 0.6536) 49.48%, rgba(255, 255, 255, 0) 100%), #FFFFFF"
-                        : "radial-gradient(150% 100% at 50% 0%,#35D07F35 0, #FBCC5C35 100%)",
-                      d = r
-                        ? "radial-gradient(100% 100% at 50% 0%, rgba(20, 49, 37, 0.29) 0%, rgba(12, 31, 23, 0.6536) 49.48%, rgba(31, 33, 40, 0) 100%, rgba(31, 33, 40, 0) 100%), #0D0E0E"
-                        : "radial-gradient(150% 100% at 50% 0%, rgb(2 80 47) 2%, rgb(12 41 28) 53%, rgb(31, 33, 40) 100%)";
-                    (Rv.style.background = n ? d : l),
-                      (Rv.style.backgroundBlendMode = r
-                        ? "none"
-                        : n
-                        ? "overlay,normal"
-                        : "multiply,normal");
-                    break;
+
                   default:
                     Lv(Sv);
                     var u = r
@@ -41195,30 +41028,6 @@
             "https://kovan.poa.network",
             "https://eth-kovan.public.blastapi.io",
           ]),
-          Object(o.a)(r, c.f.POLYGON, [
-            "https://polygon-rpc.com/",
-            "https://rpc-mainnet.matic.network",
-            "https://matic-mainnet.chainstacklabs.com",
-            "https://rpc-mainnet.maticvigil.com",
-            "https://rpc-mainnet.matic.quiknode.pro",
-            "https://matic-mainnet-full-rpc.bwarelabs.com",
-          ]),
-          Object(o.a)(r, c.f.POLYGON_MUMBAI, [
-            "https://matic-mumbai.chainstacklabs.com",
-            "https://rpc-mumbai.maticvigil.com",
-            "https://matic-testnet-archive-rpc.bwarelabs.com",
-          ]),
-          Object(o.a)(r, c.f.ARBITRUM_ONE, [
-            "https://arb1.arbitrum.io/rpc",
-            "https://arbitrum.public-rpc.com",
-          ]),
-          Object(o.a)(r, c.f.ARBITRUM_RINKEBY, [
-            "https://rinkeby.arbitrum.io/rpc",
-          ]),
-          Object(o.a)(r, c.f.OPTIMISM, [
-            "https://mainnet.optimism.io/",
-            "https://rpc.ankr.com/optimism",
-          ]),
           Object(o.a)(r, c.f.OPTIMISM_GOERLI, ["https://goerli.optimism.io"]),
           Object(o.a)(r, c.f.CELO, ["https://forno.celo.org"]),
           Object(o.a)(r, c.f.CELO_ALFAJORES, [
@@ -41262,50 +41071,6 @@
               Object(a.a)(l[c.f.KOVAN])
             )
           ),
-          Object(o.a)(
-            i,
-            c.f.OPTIMISM,
-            ["https://optimism-mainnet.infura.io/v3/".concat(s)].concat(
-              Object(a.a)(l[c.f.OPTIMISM])
-            )
-          ),
-          Object(o.a)(
-            i,
-            c.f.OPTIMISM_GOERLI,
-            ["https://optimism-goerli.infura.io/v3/".concat(s)].concat(
-              Object(a.a)(l[c.f.OPTIMISM_GOERLI])
-            )
-          ),
-          Object(o.a)(
-            i,
-            c.f.ARBITRUM_ONE,
-            ["https://arbitrum-mainnet.infura.io/v3/".concat(s)].concat(
-              Object(a.a)(l[c.f.ARBITRUM_ONE])
-            )
-          ),
-          Object(o.a)(
-            i,
-            c.f.ARBITRUM_RINKEBY,
-            ["https://arbitrum-rinkeby.infura.io/v3/".concat(s)].concat(
-              Object(a.a)(l[c.f.ARBITRUM_RINKEBY])
-            )
-          ),
-          Object(o.a)(
-            i,
-            c.f.POLYGON,
-            ["https://polygon-mainnet.infura.io/v3/".concat(s)].concat(
-              Object(a.a)(l[c.f.POLYGON])
-            )
-          ),
-          Object(o.a)(
-            i,
-            c.f.POLYGON_MUMBAI,
-            ["https://polygon-mumbai.infura.io/v3/".concat(s)].concat(
-              Object(a.a)(l[c.f.POLYGON_MUMBAI])
-            )
-          ),
-          Object(o.a)(i, c.f.CELO, l[c.f.CELO]),
-          Object(o.a)(i, c.f.CELO_ALFAJORES, l[c.f.CELO_ALFAJORES]),
           i);
     },
     183: function (e, t, n) {
@@ -44279,14 +44044,6 @@
         L =
           ((r = {}),
           Object(g.a)(r, w.f.MAINNET, p),
-          Object(g.a)(r, w.f.ARBITRUM_ONE, y),
-          Object(g.a)(r, w.f.OPTIMISM, O),
-          Object(g.a)(r, w.f.ARBITRUM_RINKEBY, C),
-          Object(g.a)(r, w.f.OPTIMISM_GOERLI, v),
-          Object(g.a)(r, w.f.POLYGON, k),
-          Object(g.a)(r, w.f.POLYGON_MUMBAI, A),
-          Object(g.a)(r, w.f.CELO, I),
-          Object(g.a)(r, w.f.CELO_ALFAJORES, T),
           Object(g.a)(r, w.f.GOERLI, m),
           Object(g.a)(r, w.f.RINKEBY, h),
           Object(g.a)(r, w.f.KOVAN, z),
@@ -44528,61 +44285,6 @@
               18,
               "WETH",
               "Wrapped Ether"
-            )
-          ),
-          Object(g.a)(
-            a,
-            w.f.OPTIMISM_GOERLI,
-            new b.Token(
-              w.f.OPTIMISM_GOERLI,
-              "0x4200000000000000000000000000000000000006",
-              18,
-              "WETH",
-              "Wrapped Ether"
-            )
-          ),
-          Object(g.a)(
-            a,
-            w.f.ARBITRUM_ONE,
-            new b.Token(
-              w.f.ARBITRUM_ONE,
-              "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
-              18,
-              "WETH",
-              "Wrapped Ether"
-            )
-          ),
-          Object(g.a)(
-            a,
-            w.f.ARBITRUM_RINKEBY,
-            new b.Token(
-              w.f.ARBITRUM_RINKEBY,
-              "0xB47e6A5f8b33b3F17603C83a0535A9dcD7E32681",
-              18,
-              "WETH",
-              "Wrapped Ether"
-            )
-          ),
-          Object(g.a)(
-            a,
-            w.f.POLYGON,
-            new b.Token(
-              w.f.POLYGON,
-              "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
-              18,
-              "WMATIC",
-              "Wrapped MATIC"
-            )
-          ),
-          Object(g.a)(
-            a,
-            w.f.POLYGON_MUMBAI,
-            new b.Token(
-              w.f.POLYGON_MUMBAI,
-              "0x9c3C9283D3e44854697Cd22D3Faa240Cfb032889",
-              18,
-              "WMATIC",
-              "Wrapped MATIC"
             )
           ),
           a)
@@ -47890,15 +47592,7 @@
       }
       var q,
         V = n(64),
-        H =
-          ((q = {}),
-          Object(r.a)(q, u.f.ARBITRUM_ONE, 25e6),
-          Object(r.a)(q, u.f.ARBITRUM_RINKEBY, 25e6),
-          Object(r.a)(q, u.f.CELO, 5e7),
-          Object(r.a)(q, u.f.CELO_ALFAJORES, 5e7),
-          Object(r.a)(q, u.f.POLYGON, 4e7),
-          Object(r.a)(q, u.f.POLYGON_MUMBAI, 4e7),
-          q);
+        H = ((q = {}), Object(r.a)(q, u.f.ARBITRUM_ONE, 25e6), q);
       var Y = n(208),
         K = n(364);
       function G(e, t, n) {
@@ -48571,18 +48265,6 @@
           Object(i.a)(r, f.f.ROPSTEN, new w(x.b[f.f.ROPSTEN])),
           Object(i.a)(r, f.f.GOERLI, new w(x.b[f.f.GOERLI])),
           Object(i.a)(r, f.f.KOVAN, new w(x.b[f.f.KOVAN])),
-          Object(i.a)(r, f.f.OPTIMISM, new w(x.b[f.f.OPTIMISM])),
-          Object(i.a)(r, f.f.OPTIMISM_GOERLI, new w(x.b[f.f.OPTIMISM_GOERLI])),
-          Object(i.a)(r, f.f.ARBITRUM_ONE, new w(x.b[f.f.ARBITRUM_ONE])),
-          Object(i.a)(
-            r,
-            f.f.ARBITRUM_RINKEBY,
-            new w(x.b[f.f.ARBITRUM_RINKEBY])
-          ),
-          Object(i.a)(r, f.f.POLYGON, new w(x.b[f.f.POLYGON])),
-          Object(i.a)(r, f.f.POLYGON_MUMBAI, new w(x.b[f.f.POLYGON_MUMBAI])),
-          Object(i.a)(r, f.f.CELO, new w(x.b[f.f.CELO])),
-          Object(i.a)(r, f.f.CELO_ALFAJORES, new w(x.b[f.f.CELO_ALFAJORES])),
           r);
     },
     311: function (e, t, n) {
@@ -48809,21 +48491,6 @@
             u.f.MAINNET,
             [].concat(Object(c.a)(b[u.f.MAINNET]), [g.g, g.v, g.y, g.C])
           ),
-          Object(o.a)(
-            r,
-            u.f.OPTIMISM,
-            [].concat(Object(c.a)(b[u.f.OPTIMISM]), [g.i, g.A, g.E])
-          ),
-          Object(o.a)(
-            r,
-            u.f.ARBITRUM_ONE,
-            [].concat(Object(c.a)(b[u.f.ARBITRUM_ONE]), [g.h, g.z, g.D])
-          ),
-          Object(o.a)(
-            r,
-            u.f.POLYGON,
-            [].concat(Object(c.a)(b[u.f.POLYGON]), [g.j, g.x, g.B, g.G])
-          ),
           Object(o.a)(r, u.f.CELO, [g.e, g.b, g.d, g.p, g.o]),
           r)
         ),
@@ -48869,54 +48536,6 @@
             g.I[u.f.GOERLI],
           ]),
           Object(o.a)(a, u.f.KOVAN, [Object(g.K)(u.f.KOVAN), g.I[u.f.KOVAN]]),
-          Object(o.a)(a, u.f.ARBITRUM_ONE, [
-            Object(g.K)(u.f.ARBITRUM_ONE),
-            g.h,
-            g.u,
-            g.z,
-            g.D,
-            g.I[u.f.ARBITRUM_ONE],
-          ]),
-          Object(o.a)(a, u.f.ARBITRUM_RINKEBY, [
-            Object(g.K)(u.f.ARBITRUM_RINKEBY),
-            g.I[u.f.ARBITRUM_RINKEBY],
-          ]),
-          Object(o.a)(a, u.f.OPTIMISM, [
-            Object(g.K)(u.f.OPTIMISM),
-            g.i,
-            g.w,
-            g.A,
-            g.E,
-          ]),
-          Object(o.a)(a, u.f.OPTIMISM_GOERLI, [
-            Object(g.K)(u.f.OPTIMISM_GOERLI),
-          ]),
-          Object(o.a)(a, u.f.POLYGON, [
-            Object(g.K)(u.f.POLYGON),
-            g.G,
-            g.x,
-            g.j,
-            g.B,
-            g.F,
-          ]),
-          Object(o.a)(a, u.f.POLYGON_MUMBAI, [
-            Object(g.K)(u.f.POLYGON_MUMBAI),
-            g.I[u.f.POLYGON_MUMBAI],
-            g.H,
-          ]),
-          Object(o.a)(a, u.f.CELO, [
-            Object(g.K)(u.f.CELO),
-            g.b,
-            g.e,
-            g.o,
-            g.p,
-            g.d,
-          ]),
-          Object(o.a)(a, u.f.CELO_ALFAJORES, [
-            Object(g.K)(u.f.CELO_ALFAJORES),
-            g.f,
-            g.c,
-          ]),
           a),
         j = Object(s.a)(
           Object(s.a)({}, b),
@@ -53661,12 +53280,6 @@
         switch (e) {
           case i.f.MAINNET:
             return "ethereum";
-          case i.f.ARBITRUM_ONE:
-            return "arbitrum";
-          case i.f.OPTIMISM:
-            return "optimism";
-          case i.f.POLYGON:
-            return "polygon";
           default:
             return "ethereum";
         }
@@ -78705,14 +78318,6 @@
         ((r = {}),
         Object(a.a)(r, o.f.MAINNET, "ETHEREUM"),
         Object(a.a)(r, o.f.GOERLI, "ETHEREUM_GOERLI"),
-        Object(a.a)(r, o.f.POLYGON, "POLYGON"),
-        Object(a.a)(r, o.f.POLYGON_MUMBAI, "POLYGON"),
-        Object(a.a)(r, o.f.CELO, "CELO"),
-        Object(a.a)(r, o.f.CELO_ALFAJORES, "CELO"),
-        Object(a.a)(r, o.f.ARBITRUM_ONE, "ARBITRUM"),
-        Object(a.a)(r, o.f.ARBITRUM_RINKEBY, "ARBITRUM"),
-        Object(a.a)(r, o.f.OPTIMISM, "OPTIMISM"),
-        Object(a.a)(r, o.f.OPTIMISM_GOERLI, "OPTIMISM"),
         r);
       function d() {
         var e = Object(c.b)(function (e) {
@@ -78722,22 +78327,15 @@
       }
       var u = {
         ethereum: "ETHEREUM",
-        polygon: "POLYGON",
-        celo: "CELO",
-        arbitrum: "ARBITRUM",
-        optimism: "OPTIMISM",
       };
       function g(e) {
         return e && u[e] ? u[e] : "ETHEREUM";
       }
       var b = {
           ETHEREUM: o.f.MAINNET,
-          POLYGON: o.f.POLYGON,
-          CELO: o.f.CELO,
-          ARBITRUM: o.f.ARBITRUM_ONE,
-          OPTIMISM: o.f.OPTIMISM,
+          GEORLI: o.f.GEORLI,
         },
-        f = ["ARBITRUM", "CELO", "ETHEREUM", "OPTIMISM", "POLYGON"];
+        f = ["ETHEREUM", "GOERLI"];
       function x(e) {
         if (!e) return !1;
         for (var t = 0; t < f.length; t++) if (e === f[t]) return !0;
@@ -79753,7 +79351,7 @@
             actions: e,
             options: {
               url: b.b[u.f.MAINNET][0],
-              appName: "Uniswap",
+              appName: "Bubbleswap",
               appLogoUrl: g,
               reloadOnDisconnect: !1,
             },
@@ -79944,20 +79542,6 @@
           Object(a.a)(r, o.f.RINKEBY, "https://rinkeby.etherscan.io"),
           Object(a.a)(r, o.f.GOERLI, "https://goerli.etherscan.io"),
           Object(a.a)(r, o.f.KOVAN, "https://kovan.etherscan.io"),
-          Object(a.a)(r, o.f.OPTIMISM, "https://optimistic.etherscan.io"),
-          Object(a.a)(
-            r,
-            o.f.OPTIMISM_GOERLI,
-            "https://goerli-optimism.etherscan.io"
-          ),
-          Object(a.a)(r, o.f.POLYGON, "https://polygonscan.com"),
-          Object(a.a)(r, o.f.POLYGON_MUMBAI, "https://mumbai.polygonscan.com"),
-          Object(a.a)(r, o.f.CELO, "https://celoscan.io"),
-          Object(a.a)(
-            r,
-            o.f.CELO_ALFAJORES,
-            "https://alfajores-blockscout.celo-testnet.org"
-          ),
           r);
       function s(e, t, n) {
         var r;
@@ -80484,7 +80068,7 @@
         D = Object(g.a)(
           Object(g.a)(
             {},
-            p("0xb27308f9F90D607463bb33eA1BeBb41C27CE5AB6", [
+            p("0x26d4e062d9e3049B8FF0210D9bB6E518ED4E0C0E", [
               x.f.OPTIMISM,
               x.f.OPTIMISM_GOERLI,
               x.f.ARBITRUM_ONE,
@@ -80547,16 +80131,6 @@
         ),
         W =
           ((d = {}),
-          Object(u.a)(
-            d,
-            x.f.ARBITRUM_ONE,
-            "0xbfd8137f7d1516D3ea5cA83523914859ec47F573"
-          ),
-          Object(u.a)(
-            d,
-            x.f.ARBITRUM_RINKEBY,
-            "0xbfd8137f7d1516D3ea5cA83523914859ec47F573"
-          ),
           Object(u.a)(d, x.f.CELO, A),
           Object(u.a)(d, x.f.CELO_ALFAJORES, A),
           d);
